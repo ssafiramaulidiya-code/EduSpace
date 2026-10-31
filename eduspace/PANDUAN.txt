@@ -1,0 +1,22 @@
+PANDUAN PEMASANGAN PERBAIKAN EDUSPACE (GURU/ADMIN)
+
+1. Buat salinan/backup folder eduspace yang lama terlebih dahulu.
+2. Ekstrak ZIP ini.
+3. Salin isi folder eduspace_guru_fixed ke folder C:\xampp\htdocs\eduspace dan pilih Replace jika diminta.
+   Jangan menghapus file lain yang mungkin sudah kamu tambahkan sendiri.
+4. Buka XAMPP, pastikan Apache dan MySQL dalam keadaan Start.
+5. Buka http://localhost/phpmyadmin
+6. Pilih tab Import, pilih file setup_absensi.sql dari folder eduspace, lalu klik Import/Go.
+   File SQL akan membuat database eduspace, tabel kelas/siswa/absensi, dan memasukkan 60 nama siswa.
+7. Buka http://localhost/eduspace/pages/absensi-guru.php
+
+PERBAIKAN YANG DILAKUKAN
+- Link Input Absensi pada Home, Materi, Program Akademik, dan Ruang Diskusi diarahkan ke absensi-guru.php.
+- Ditambahkan file setup_absensi.sql karena kode absensi-guru.php membutuhkan tabel classes, students, dan attendance.
+- Nama 60 siswa dimasukkan sesuai workbook daftar siswa yang diberikan.
+
+CATATAN
+- Backup dulu sebelum replace file.
+- Menu Tugas & Quiz dan Nilai masih mengarah ke halaman tugas.php dan nilai.php yang belum ada di ZIP yang kamu kirim. Kita akan membangun halaman tersebut nanti.
+- Menu lain yang sudah ada tetap dipertahankan.
+- Halaman ini belum memiliki login/otorisasi pengguna.
